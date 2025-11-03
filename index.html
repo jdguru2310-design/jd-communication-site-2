@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>JD Communication Services — Certificate Assistance</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- EmailJS -->
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <!-- Firebase (modular) -->
+  <script type="module" src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+  <script type="module" src="https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore-compat.js"></script>
+  <script type="module" src="https://www.gstatic.com/firebasejs/9.22.2/firebase-storage-compat.js"></script>
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <div class="brand">
+        <img src="assets/logo-placeholder.png" alt="JD Communication Services logo" class="logo">
+        <div>
+          <h1>JD Communication Services</h1>
+          <small>Fast • Reliable • Paperwork made easy</small>
+        </div>
+      </div>
+      <nav class="nav">
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+        <button id="theme-toggle" class="theme-toggle">🌙</button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="wrap hero-inner">
+        <div class="hero-text">
+          <h2>Need a certificate or ID fast?</h2>
+          <p>We assist with Community, Income, Nativity, PAN, Voter ID, OBC, PSTM and more — end-to-end help from form filling to submission.</p>
+          <a class="cta" href="#services" role="button">Apply for a Service</a>
+        </div>
+        <div class="hero-card">
+          <h3>How it works</h3>
+          <ol>
+            <li>Choose the certificate you need</li>
+            <li>Fill a short request form</li>
+            <li>We process & assist until issuance</li>
+          </ol>
+          <p class="note">All submissions are private — you’ll receive updates at <strong>jdguru2310@gmail.com</strong>.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="wrap services-section">
+      <h2>Our Services</h2>
+      <p class="lead">Select a service to apply — quick forms and secure submission.</p>
+
+      <div class="service-grid" id="service-grid">
+        <!-- Service cards inserted by script -->
+      </div>
+    </section>
+
+    <section id="about" class="wrap about-section">
+      <h2>About JD Communication Services</h2>
+      <p>JD Communication Services helps citizens obtain important government-issued documents with minimal hassle. We guide you through the process, prepare application paperwork, and liaise with authorities when needed.</p>
+    </section>
+
+    <section id="contact" class="wrap contact-section">
+      <h2>Contact Us</h2>
+      <p>Questions? Send us a message or use the service forms to apply directly.</p>
+
+      <form id="contact-form" class="card form-card">
+        <input type="text" name="name" id="contact-name" placeholder="Your name" required>
+        <input type="email" name="email" id="contact-email" placeholder="Your email" required>
+        <input type="tel" name="phone" id="contact-phone" placeholder="Phone (optional)">
+        <textarea name="message" id="contact-message" rows="5" placeholder="How can we help?" required></textarea>
+        <div class="form-row">
+          <button type="submit" class="btn primary">Send Message</button>
+          <span id="contact-status" class="status"></span>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <div>
+        <strong>JD Communication Services</strong><br>
+        Contact: <a href="mailto:contact@jdguru2310@gmail.com">contact@jdguru2310@gmail.com</a>
+      </div>
+      <div>© 2025 JD Communication Services</div>
+    </div>
+  </footer>
+
+  <!-- Modal container -->
+  <div id="modal-root"></div>
+</body>
+</html>
